@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+}
+
+.container {
+  align-items: baseline !important;
+  justify-content: flex-end !important;
+
+  header {
+    display: grid;
+    align-self: auto;
+    
+    // set drag to window due to frameless window
+    -ms-overflow-style: scrollbar;
+    -webkit-app-region:drag;
+
+    nav {
+      justify-self: right;
+      padding: 5px;
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          float: left;
+          margin-left: 10px;
+
+          img {
+            width: 20px;
+            cursor: pointer;
+          }
+        }
+      }    
+    }
+  }
+}
+
+// Avoid drag on input elements
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+button,
+textarea,
+nav li {
+	-webkit-app-region: no-drag;
+}
